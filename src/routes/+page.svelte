@@ -5,7 +5,7 @@
 	import Promo from "$lib/core/components/Promo.svelte";
 	import Footer from "$lib/core/components/Footer.svelte";
 	import { CharityEntity } from "$lib/domain/charity.entity";
-
+	
 	let title = "Charity";
 	let charities = [
 		new CharityEntity(
