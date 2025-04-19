@@ -3,14 +3,14 @@
 		<nav class="xs-menus">
 			<div class="nav-header">
 				<div class="nav-toggle"></div>
-				<a href="" class="nav-logo">
+				<a href="/" class="nav-logo">
 					<img src="assets/images/logo.png" alt="" />
 				</a>
 			</div>
 			<!-- .nav-header END -->
 			<div class="nav-menus-wrapper row">
 				<div class="xs-logo-wraper col-lg-2 xs-padding-0">
-					<a class="nav-brand" href="">
+					<a class="nav-brand" href="/">
 						<img src="assets/images/logo.png" alt="" />
 					</a>
 				</div>
@@ -24,7 +24,7 @@
 					<!-- .nav-menu END -->
 				</div>
 				<div class="xs-navs-button d-flex-center-end col-lg-3">
-					<a href="#popularcause" class="btn btn-primary">
+					<a href="/donation" class="btn btn-primary">
 						<span class="badge"><i class="fa fa-heart"></i></span> Donate Now
 					</a>
 				</div>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import "$lib/core/extensions/number.extensions";
 	import "$lib/core/extensions/date.extensions";
-	import type { CharityEntity } from "$lib/domain/charity.entity";
+	import type { CharityEntity } from "$lib/domains/entities/charity.entity";
 	import Modal from "./Modal.svelte";
 
 	export let charity: CharityEntity;
