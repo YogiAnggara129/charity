@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { CharityEntity } from "$lib/domains/entities/charity.entity";
+	import type CharityEntity from "$lib/domains/entities/charity.entity";
 	import { onMount } from "svelte";
 	import { matchResult, type Result } from "$lib/core/base/result";
 	import { toast } from "@zerodevx/svelte-toast";

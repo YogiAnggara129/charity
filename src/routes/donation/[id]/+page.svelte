@@ -1,14 +1,24 @@
+<script lang="ts">
+	import { page } from "$app/state";
+	import CharityEntity from "$lib/domains/entities/charity.entity";
+	import type { PageProps } from "./$types";
+
+	let { data }: PageProps = $props();
+
+	const charity: CharityEntity = CharityEntity.fromJson(data.charity);
+</script>
+
 <!-- End header section -->
 <!-- welcome section -->
 <!--breadcumb start here-->
 <section
 	class="xs-banner-inner-section parallax-window"
-	style="background-image:url('assets/images/about_bg.png')"
+	style="background-image:url('/assets/images/about_bg.png')"
 >
 	<div class="xs-black-overlay"></div>
 	<div class="container">
 		<div class="color-white xs-inner-banner-content">
-			<h2>Donate Now</h2>
+			<h2>{charity?.title}</h2>
 			<p>Give a helping hand for poor people</p>
 			<ul class="xs-breadcumb">
 				<li class="badge badge-pill badge-primary">
@@ -27,7 +37,7 @@
 				<div class="col-lg-6">
 					<div class="xs-donation-form-images">
 						<img
-							src="assets/images/about_img.jpg"
+							src={charity?.thumbnail}
 							class="img-responsive w-100 img-fluid"
 							alt="Family Images"
 						/>

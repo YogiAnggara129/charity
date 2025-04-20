@@ -1,15 +1,15 @@
-<script>
-	export let status;
-	export let error;
+<script lang="ts">
+	import { page } from "$app/state";
 </script>
 
 <section class="notfound-section">
 	<div class="notfound-wrapper">
-		<h1 class="notfound-status">{status}</h1>
+		<h1 class="notfound-status">{page.status}</h1>
 		<h2 class="notfound-title">Oops! Page not found</h2>
 		<p class="notfound-message">
-			{error?.message ??
-				"The page you are looking for might have been removed or is temporarily unavailable."}
+			{page.error?.message == "Not Found"
+				? "The page you are looking for might have been removed or is temporarily unavailable."
+				: page.error?.message}
 		</p>
 		<a href="/" class="notfound-btn">Back to Homepage</a>
 	</div>

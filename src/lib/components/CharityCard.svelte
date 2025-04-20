@@ -1,7 +1,7 @@
 <script lang="ts">
 	import "$lib/core/extensions/number.extensions";
 	import "$lib/core/extensions/date.extensions";
-	import type { CharityEntity } from "$lib/domains/entities/charity.entity";
+	import type CharityEntity from "$lib/domains/entities/charity.entity";
 	import Modal from "./Modal.svelte";
 
 	export let charity: CharityEntity;
@@ -37,10 +37,12 @@
 		<!-- .xs-item-header END -->
 		<div class="xs-item-content">
 			<ul class="xs-simple-tag xs-mb-20">
-				<li><a href="">{charity.category}</a></li>
+				<li><a href="/">{charity.category}</a></li>
 			</ul>
 
-			<a href="#" class="xs-post-title xs-mb-30">{charity.title}</a>
+			<a href="/donation/{charity.id}" class="xs-post-title xs-mb-30"
+				>{charity.title}</a
+			>
 
 			<ul class="xs-list-with-content">
 				<li>{charity.pledged.toIdr()}<span>Pledged</span></li>
@@ -64,7 +66,7 @@
 					<img src={charity.profile_photo} alt="" />
 				</div>
 				<div class="xs-avatar-title">
-					<a href="#"><span>By</span>{charity.profile_name}</a>
+					<a href="/"><span>By</span>{charity.profile_name}</a>
 				</div>
 			</div>
 

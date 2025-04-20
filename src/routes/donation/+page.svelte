@@ -1,3 +1,9 @@
+<script>
+	import { page } from "$app/state";
+
+	console.log(page.params);
+</script>
+
 <!-- End header section -->
 <!-- welcome section -->
 <!--breadcumb start here-->
@@ -139,7 +145,7 @@
 		width: 65px;
 	}
 
-	label[for='xs-donate-agree'] {
+	label[for="xs-donate-agree"] {
 		margin: 0;
 		margin-left: 10px;
 	}
